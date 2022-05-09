@@ -16,8 +16,10 @@ public class Practice_OrangeTestCase4 {
 		WebDriver driver=new EdgeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
+		String pass="Admin123";
+		String lowerPass=pass.toLowerCase();
 		driver.findElement(By.id("txtUsername")).sendKeys("Admin");
-		driver.findElement(By.id("txtPassword")).sendKeys("admin123");
+		driver.findElement(By.id("txtPassword")).sendKeys(lowerPass);
 		driver.findElement(By.id("btnLogin")).click();
 		String dash="https://opensource-demo.orangehrmlive.com/index.php/dashboard";
 		String s=driver.getCurrentUrl();
